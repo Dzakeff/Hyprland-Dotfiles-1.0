@@ -1,0 +1,1 @@
+/home/dzakeff/.config/colorschemes/Everforest/hyprland/decorations.lua

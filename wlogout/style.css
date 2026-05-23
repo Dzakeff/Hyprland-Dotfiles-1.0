@@ -1,0 +1,57 @@
+window {
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 14pt;
+  color: #abb2bf;
+  background-color: transparent;
+}
+
+button {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+  border-style: solid;
+  border-width: 3px;
+  background-color: rgba(40, 44, 52, 0.4);
+  border-color: #3e4451;
+  margin: 5px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(97, 175, 239, 0.1);
+  border-color: #61afef;
+}
+
+button:focus {
+  background-color: rgba(97, 175, 239, 0.2);
+  border-color: #61afef;
+}
+
+#lock {
+  background-image: image(url("icons/lock.svg"));
+}
+#logout {
+  background-image: image(url("icons/logout.svg"));
+}
+#suspend {
+  background-image: image(url("icons/suspend.svg"));
+}
+#hibernate {
+  background-image: image(url("icons/hibernate.svg"));
+}
+#reboot {
+  background-image: image(url("icons/reboot.svg"));
+}
+#shutdown {
+  background-image: image(url("icons/shutdown.svg"));
+}
+
+window {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

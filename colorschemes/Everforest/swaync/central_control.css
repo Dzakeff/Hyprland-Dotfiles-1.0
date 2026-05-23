@@ -1,0 +1,280 @@
+/* Catppuccin Macchiato - central_control.css */
+/* @background hardcoded → alpha() works → Hyprland blur visible */
+
+@define-color text            #cad3f5;
+@define-color background-alt  #363a4f;
+@define-color selected        #8aadf4;
+@define-color hover           alpha(#8aadf4, .35);
+@define-color urgent          #ed8796;
+@define-color background      #24273a;
+
+* {
+  color: @text;
+  all: unset;
+  font-size: 14px;
+  font-family: "JetBrains Mono Nerd Font Propo 10";
+  transition: 200ms;
+}
+
+.blank-window {
+  background: transparent;
+}
+
+.control-center {
+  background: alpha(@background, .55);
+  border-radius: 24px;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
+  margin: 18px;
+  padding: 12px;
+}
+
+.control-center .notification-row .notification-background {
+  background-color: alpha(@background-alt, .6);
+  border-radius: 16px;
+  margin: 4px 0;
+  padding: 4px;
+}
+
+.control-center .notification-row .notification-background .notification.critical {
+  color: @urgent;
+  border: 2px solid @urgent;
+}
+
+.control-center .notification-content {
+  margin: 6px;
+  padding: 8px 6px 2px 2px;
+}
+
+.control-center .notification-action {
+  background: alpha(@selected, .6);
+  color: @text;
+  border-radius: 12px;
+  margin: 6px;
+  padding: 8px;
+}
+
+.control-center .notification-action:hover {
+  background: @selected;
+}
+
+.control-center .close-button {
+  background: transparent;
+  border-radius: 8px;
+  color: @text;
+  padding: 4px;
+}
+
+.control-center .close-button:hover {
+  background-color: @hover;
+}
+
+.notification-group {
+  margin: 2px 8px;
+}
+
+.notification-group-headers {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: @text;
+  letter-spacing: 2px;
+}
+
+.notification-group-icon,
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  color: @text;
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background: transparent;
+  margin: 4px;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.notification-group-collapse-button:hover,
+.notification-group-close-all-button:hover {
+  background: @hover;
+}
+
+.widget-title {
+  font-size: 1.2em;
+  margin: 6px;
+}
+
+.widget-title button {
+  background: @background-alt;
+  border-radius: 8px;
+  padding: 4px 16px;
+}
+
+.widget-title button:hover {
+  background-color: @hover;
+}
+
+.widget-title button:active {
+  background-color: @selected;
+  color: @background;
+}
+
+.widget-dnd {
+  margin: 6px;
+  font-size: 1.2rem;
+}
+
+.widget-dnd > switch {
+  background: @background-alt;
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.widget-dnd > switch:hover {
+  background: @hover;
+}
+
+.widget-dnd > switch:checked {
+  background: @selected;
+}
+
+.widget-dnd > switch slider {
+  background: @text;
+  border-radius: 6px;
+}
+
+.widget-buttons-grid {
+  padding: 6px 2px;
+  margin: 6px;
+  border-radius: 12px;
+  background: @background-alt;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  margin: 4px 10px;
+  padding: 6px 12px;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: @hover;
+}
+
+.widget-mpris {
+  background: @background-alt;
+  border-radius: 16px;
+  color: @text;
+  margin: 20px 6px;
+}
+
+.widget-mpris-player {
+  background-color: @background;
+  border-radius: 22px;
+  padding: 6px 14px;
+  margin: 6px;
+}
+
+.widget-mpris button {
+  color: alpha(@text, .6);
+}
+
+.widget-mpris button:hover {
+  color: @text;
+}
+
+.widget-mpris-album-art {
+  border-radius: 16px;
+}
+
+.widget-mpris-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: @text;
+}
+
+.widget-mpris-subtitle {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: alpha(@text, .75);
+}
+
+picture.mpris-background {
+  opacity: 0;
+}
+
+.widget-volume {
+  background: @background;
+  padding: 4px;
+  margin: 6px;
+  border-radius: 8px;
+}
+
+.widget-volume trough highlight {
+  background: @selected;
+}
+
+.control-center {
+  min-width: 380px;
+  max-width: 380px;
+  min-height: 720px;
+  padding: 12px;
+}
+
+.widget-buttons-grid {
+  padding: 6px 8px;
+  margin: 8px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 6px;
+  margin: 4px 10px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+  font-size: 1.2rem;
+}
+
+.widget-title {
+  margin: 6px 8px;
+}
+
+.widget-title > label {
+  font-size: 1rem;
+}
+
+.widget-dnd {
+  margin: 6px 8px;
+  font-size: 0.95rem;
+}
+
+.widget-dnd > switch {
+  min-width: 36px;
+  min-height: 20px;
+}
+
+.widget-dnd > switch slider {
+  min-width: 16px;
+  min-height: 16px;
+}
+
+.control-center .notification-group {
+  margin-top: 8px;
+}
+
+.control-center .notification-background {
+  margin: 4px 8px;
+}
+
+.widget-label > label {
+  font-size: 1rem;
+}
+
+.widget-mpris {
+  margin: 10px 6px;
+}
+
+.widget-mpris-album-art {
+  -gtk-icon-size: 70px;
+}
